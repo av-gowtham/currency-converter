@@ -9,17 +9,6 @@ function Currency() {
   const [exchangeRate, setExchangeRate] = useState(null);
   const [convertedAmount, setConvertedAmount] = useState(null);
 
-  async function handleConverter() {
-    try {
-      const url = `https://api.exchangerate-api.com/v4/latest/${fromCurrency}`;
-      const res = await axios.get(url);
-      setExchangeRate(res.data.rates[toCurrency]);
-    } catch (e) {
-      console.log("Error occurs while fetching exchange rate:", e);
-      alert("Error occurs while fetching exchange data");
-    }
-  }
-
   function handleAmountChange(e) {
     const value = parseFloat(e.target.value);
     setAmount(isNaN(value) ? 0 : value);
@@ -32,6 +21,16 @@ function Currency() {
   }
 
   useEffect(() => {
+    async function handleConverter() {
+      try {
+        const url = `https://api.exchangerate-api.com/v4/latest/${fromCurrency}`;
+        const res = await axios.get(url);
+        setExchangeRate(res.data.rates[toCurrency]);
+      } catch (e) {
+        console.log("Error occurs while fetching exchange rate:", e);
+        alert("Error occurs while fetching exchange data");
+      }
+    }
     handleConverter();
   }, [fromCurrency, toCurrency]);
 
