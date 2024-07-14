@@ -116,6 +116,10 @@ option {
     margin-bottom: 10px;
   }
 
+  .container {
+    margin-top: 20px;
+  }
+
   input,
   select {
     padding: 10px;
