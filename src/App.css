@@ -32,7 +32,7 @@ h1 {
   text-transform: uppercase;
   font-style: italic;
   font-weight: 900;
-  font-size: 24px;
+  font-size: 27px;
   padding: 10px 0;
   margin-bottom: 15px;
   color: #9fe870;
@@ -52,7 +52,7 @@ main {
   border-radius: 36px;
 }
 
-.input-container {
+.input-container:nth-child(odd) {
   margin-bottom: 20px;
 }
 
@@ -88,13 +88,24 @@ option {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .exchange-img button {
   border: none;
   background-color: #fff;
   cursor: pointer;
+}
+
+.exchange-img svg {
+  width: 60px;
+  height: 60px;
+  padding: 18px;
+  border-radius: 5px;
+  transform: rotate(90deg);
+}
+
+.result {
+  margin-top: 10px;
 }
 
 .result p {
@@ -128,7 +139,6 @@ option {
 
   .exchange-img {
     width: 100%;
-    margin-bottom: 10px;
   }
 
   .exchange-img button {
@@ -138,8 +148,11 @@ option {
   }
 
   .exchange-img svg {
-    width: 20px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
+    padding: 12px;
+    border-radius: 5px;
+    transform: rotate(90deg);
   }
 
   .result p {
