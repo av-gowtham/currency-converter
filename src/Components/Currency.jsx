@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { currencies } from "./Currencies.js";
+import image from "../assets/exchange.png";
 import axios from "axios";
 
 function Currency() {
@@ -44,7 +45,7 @@ function Currency() {
     <div className="container">
       <header>
         <h1>Currency converter</h1>
-        <img src="/exchange.png" alt="" />
+        <img src={image} alt="" />
       </header>
       <main>
         <div className="data">
