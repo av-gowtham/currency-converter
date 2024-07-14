@@ -1,3 +1,5 @@
+//over 118 countries data
+
 export const currencies = [
   {
     symbol: "$",
